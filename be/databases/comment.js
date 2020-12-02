@@ -4,6 +4,6 @@
 // user_nickname : 닉네임
 // content : 내용
 
-const Comment = {};
+const Comment = [];
 
 module.exports = Comment;

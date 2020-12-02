@@ -4,6 +4,6 @@
 // title : 제목
 // content : 내용
 
-const Board = {};
+const Board = [];
 
 module.exports = Board;
