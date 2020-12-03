@@ -1,0 +1,16 @@
+* {
+  margin: 0px;
+  text-decoration: none;
+}
+.login_container {
+  border: 1px solid black;
+  width: 35%;
+  padding: 6px;
+}
+
+#input_id,
+#input_pw,
+#logInBtn {
+  height: 30px;
+  margin: 1px;
+}
