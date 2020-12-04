@@ -19,11 +19,12 @@ app.get("/join", (req, res) => {
     const pw = req.query.pw;
     for(let i = 0; i < User.length; i++){
         if(User[i].id == id){
-            return res.send('회원가입 실패!');
+            return res.json(false);
         }
     }
+
     User.push({id: id, nickName: nickName, pw: pw});
-    res.send('회원가입 성공!');
+    res.json(true);
 });
 
 app.get("/login", (req, res) =>{
