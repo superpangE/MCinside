@@ -3,6 +3,12 @@
 // nickName : 닉네임
 // password : 비밀번호
 
-const User = [];
+const User = [
+  {
+    id: "abc",
+    nickName: "abc",
+    password: "abc",
+  },
+];
 
 module.exports = User;

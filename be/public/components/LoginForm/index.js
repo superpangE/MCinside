@@ -53,7 +53,7 @@ const LoginForm = () => {
     const mcId = input_id.value;
     const mcPw = input_pw.value;
 
-    const URL = "http://localhost:3000/join?" + "id=" + mcId + "&pw=" + mcPw;
+    const URL = "http://localhost:3000/login?" + "id=" + mcId + "&pw=" + mcPw;
 
     // 서버로 데이터를 보내 응답을 기다린다.
     const response = await fetch(URL, {
@@ -61,8 +61,8 @@ const LoginForm = () => {
     });
     const data = await response.json();
 
-    if (data === true) window.alert("회원가입 성공");
-    else window.alert("회원가입 실패!");
+    if (data === true) window.alert("로그인 성공");
+    else window.alert("로그인 실패!");
   };
 
   loginButton.addEventListener("click", onClick);

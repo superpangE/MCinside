@@ -29,11 +29,15 @@ app.get("/login", (req, res) => {
   const id = req.query.id;
   const pw = req.query.pw;
   for (let i = 0; i < User.length; i++) {
-    if (User[i].id == id && User[i].pw == pw) {
-      return res.send("Correct");
+    if (User[i].id == id && User[i].password == pw) {
+      return res.json(true);
     }
   }
-  res.send("Wrong ID or pw");
+  res.json(false);
+});
+
+app.get("/board", (req, res) => {
+  res.json({ board: Board });
 });
 
 app.listen(3000);
