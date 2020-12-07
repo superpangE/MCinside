@@ -2,6 +2,8 @@
   margin: 0px;
   text-decoration: none;
 }
+
+ /* 로그인 폼 */
 .login_container {
   border: 1px solid black;
   width: 35%;
@@ -13,4 +15,29 @@
 #logInBtn {
   height: 30px;
   margin: 1px;
+}
+
+/* 헤더 */
+.header_container{
+  display: flex;
+  align-items: center;
+}
+
+.label_title{
+  font-size : 6px;
+  margin : 0 6px;
+  font-weight: 900;
+}
+.header_label{
+  font-size : 6px;
+  margin : 0 6px;
+
+}
+.header_label:hover{
+  font-weight: 900;
+  cursor:pointer;
+}
+
+#header_input{
+  width : 300px;
 }

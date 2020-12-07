@@ -1,37 +1,10 @@
-const getInputElement = (id, placeholder) => {
-  const inputEle = document.createElement("input");
-  inputEle.id = id;
-  inputEle.placeholder = placeholder;
-  return inputEle;
-};
-
-const getButton = (id, textContent) => {
-  const button = document.createElement("button");
-  button.id = id;
-  button.textContent = textContent;
-  return button;
-};
-
-const getLink = (className, href, text) => {
-  const link = document.createElement("a");
-  link.class = className;
-  link.href = href;
-  link.text = text;
-  return link;
-};
-
-const getContaier = (id, className, type) => {
-  const container = document.createElement("div");
-  if (type == "className") container.className = className;
-  else container.id = id;
-  return container;
-};
+import {getInputElement, getButton, getLink, getContainer} from "../common.js";
 
 const LoginForm = () => {
-  const loginContainer = getContaier("login_container", null, "id");
+  const loginContainer = getContainer("login_container", null, "id");
   const login_wraps = [];
   for (let i = 0; i < 3; i++) {
-    const login_wrap = getContaier(null, "login_wrap", "className");
+    const login_wrap = getContainer(null, "login_wrap", "className");
     login_wraps.push(login_wrap);
   }
   const input_id = getInputElement("input_id", "아이디");
