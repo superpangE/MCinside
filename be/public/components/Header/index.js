@@ -1,14 +1,14 @@
 import { getContainer, getimgElment, getInputElement, getButton, getLabel } from "../common.js";
 
 const Header = () => {
-  const Header = getContainer("", "header_container", "className");
+  const Header = getContainer(null, "header_container");
   const logoImg = getimgElment(
     "https://nstatic.dcinside.com/dc/logo_day/dc_logo_201207.gif"
   );
   const Logo = getContainer("", "logo", "className", logoImg);
-  const SearchBox = getContainer("", "search_box", "className");
-  const Labelwrap = getContainer("", "label_wrap", "className");
-  const Inputwrap = getContainer("", "input_wrap", "className");
+  const SearchBox = getContainer(null, "search_box");
+  const Labelwrap = getContainer(null, "label_wrap");
+  const Inputwrap = getContainer(null, "input_wrap");
   const HeaderInput = getInputElement("header_input", "갤러리 & 통합검색");
   const SearchButton = getButton("search_button", "검색");
 

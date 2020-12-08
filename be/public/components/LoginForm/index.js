@@ -1,10 +1,10 @@
 import {getInputElement, getButton, getLink, getContainer} from "../common.js";
 
 const LoginForm = () => {
-  const loginContainer = getContainer("login_container", null, "id");
+  const loginContainer = getContainer("login_container", null);
   const login_wraps = [];
   for (let i = 0; i < 3; i++) {
-    const login_wrap = getContainer(null, "login_wrap", "className");
+    const login_wrap = getContainer(null, "login_wrap");
     login_wraps.push(login_wrap);
   }
   const input_id = getInputElement("input_id", "아이디");

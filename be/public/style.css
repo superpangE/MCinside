@@ -41,3 +41,65 @@
 #header_input{
   width : 300px;
 }
+
+/* 메뉴 바 */
+
+#BigMenu{
+  display: flex;
+  justify-content : space-around;
+  align-items: center;
+  background-color: #4A56A8;
+  color : white;
+  height : 50px;
+}
+
+#menuLabel{
+  display: flex;
+  justify-content : space-between;
+  align-items: center;
+  /* border : 1px solid; */
+  width : 600px;
+}
+
+
+.labels:hover{
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+/* 실북갤 */
+.bookgall_container{
+  border:1px solid;
+  width : 320px;
+}
+
+.bookgall_titlewrap{
+  display : flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px dashed gray;
+}
+.bookgall_link{
+  margin: 4px 0px 7px 0px;
+}
+
+.bookgall_rank{
+  background-color: #4A56A8;
+  padding: 0px 2px;
+  color : white;
+}
+.bookgall_contentwrap{
+  display: flex;
+  flex-direction: column;
+  margin : 0 5px;  
+}
+
+.bookgall_name{
+  margin : 0 5px;  
+  color : black;
+}
+
+.bookgall_name:hover{
+  text-decoration: underline;  
+}
+

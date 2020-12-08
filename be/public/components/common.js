@@ -1,11 +1,22 @@
-const getContainer = (id, className, type, imgEle = undefined) => {
-    const container = document.createElement("div");
-    if (type == "className") container.className = className;
-    else container.id = id;
-    if (imgEle != undefined) {
-      container.insertAdjacentElement("afterbegin", imgEle);
-    }
-    return container;
+const getContainer = (id, className, imgEle = undefined) => {
+  const container = document.createElement("div");
+  if (className != null) container.className = className;
+  else container.id = id;
+  if (imgEle != undefined) {
+    container.insertAdjacentElement("afterbegin", imgEle);
+  }
+  return container;
+};
+
+const getSpan = (id, className, text = undefined, imgEle = undefined) => {
+  const spanbox = document.createElement("span");
+  spanbox.textContent = text;
+  if (className != null) spanbox.className = className;
+  else spanbox.id = id;
+  if (imgEle != undefined) {
+    spanbox.insertAdjacentElement("afterbegin", imgEle);
+  }
+  return spanbox;
 };
 
 const getimgElment = (url) => {
@@ -37,10 +48,10 @@ const getLabel = (className, text) => {
 
 const getLink = (className, href, text) => {
     const link = document.createElement("a");
-    link.class = className;
+    link.className = className;
     link.href = href;
     link.text = text;
     return link;
 };
 
-export { getContainer, getimgElment, getInputElement, getButton, getLabel, getLink};
+export { getContainer, getimgElment, getInputElement, getButton, getLabel, getLink, getSpan};
