@@ -2,7 +2,7 @@ import { getContainer, getimgElment, getInputElement, getButton, getLabel, getSp
 
 const getHitContent = (Board) => {
     const HitContent = getSpan(null, "hitgall_hitcontent");
-    const ContentImg = getimgElment(Board.imgUrl);
+    const ContentImg = getimgElment(Board.imgUrl, "hit_gall_photo");
     const ContentTitle = getLabel("hitgall_title", Board.title);
     const contentAuthor = getLabel("hitgall_title", Board.gallName);
     HitContent.insertAdjacentElement("beforeend", ContentImg);
@@ -16,7 +16,7 @@ const HitGall = async () => {
     const TitleWrap =  getContainer(null, "hitgall_titlewrap");
     const ContentWrap = getContainer(null, "hitgall_contentwrap");
 
-    const HitLabel = getLabel("hitgall_title_labe", "Hit 갤러리");
+    const HitLabel = getLabel("hitgall_title_label", "Hit 갤러리");
     TitleWrap.insertAdjacentElement("beforeend", HitLabel);
     
     const URL = "http://localhost:3000/board";

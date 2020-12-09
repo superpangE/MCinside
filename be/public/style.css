@@ -103,3 +103,37 @@
   text-decoration: underline;  
 }
 
+/* 힛갤 */
+.hitgall_container{
+  padding : 10px;
+}
+.hitgall_title_label:hover{
+  cursor: pointer;
+}
+.hitgall_titlewrap{
+  border-bottom : 2px solid #3c4790;
+  padding :7px;
+  color : #3c4790;
+}
+.hitgall_titlewrap{
+  cursor:pointer;
+}
+.hitgall_hitcontent{
+  display : table-cell;
+  padding-right : 10px;
+}
+.hitgall_hitcontent:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.hitgall_title{
+  display :table-cell;
+}
+.hitgall_contentwrap{
+  padding : 8px 0;
+}
+.hit_gall_photo{
+  width : 171px;
+  height : 171px;
+
+}

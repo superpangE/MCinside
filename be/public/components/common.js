@@ -19,9 +19,10 @@ const getSpan = (id, className, text = undefined, imgEle = undefined) => {
   return spanbox;
 };
 
-const getimgElment = (url) => {
+const getimgElment = (url,classname) => {
   const imgEle = document.createElement("img");
   imgEle.src = url;
+  imgEle.className = classname;
   return imgEle;
 };
 
