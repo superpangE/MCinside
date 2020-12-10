@@ -119,8 +119,10 @@
   cursor:pointer;
 }
 .hitgall_hitcontent{
-  display : table-cell;
+  display : flex;
+  flex-direction :column;
   padding-right : 10px;
+
 }
 .hitgall_hitcontent:hover{
   cursor: pointer;
@@ -129,9 +131,14 @@
 .hitgall_title{
   display :table-cell;
 }
+.hitgall_title:hover{
+  cursor: pointer;
+}
 .hitgall_contentwrap{
   padding : 8px 0;
+  display : flex;
 }
+
 .hit_gall_photo{
   width : 171px;
   height : 171px;
