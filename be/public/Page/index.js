@@ -1,8 +1,4 @@
-import {BookGall, Header, HitGall, LoginForm, MenuBar} from "../components/index.js";
+// import { BookGall, Header, HitGall, LoginForm, MenuBar } from '../components/index';
 
-
-const MainPage = ()=>{
-
-    return MainPage;
-}
+const MainPage = () => {};
 export default MainPage;
