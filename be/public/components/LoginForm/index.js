@@ -1,8 +1,17 @@
 /* eslint-disable no-useless-concat */
 /* eslint-disable prefer-template */
-import { getInputElement, getButton, getLink, getContainer } from '../common.js';
+import { getInputElement, getButton, getLink, getContainer, getLabel } from '../common.js';
 
-const LoginForm = () => {
+const LoginForm = async () => {
+  const response = await fetch('http://localhost:3000/isLogined', {
+    method: 'get',
+  });
+  const data = await response.json();
+
+  if (data.status) {
+    const TempLabel = getLabel('temp_label', `${data.id}님 환영합니다!`);
+    return TempLabel;
+  }
   const loginContainer = getContainer('login_container', null);
   const loginWraps = [];
   for (let i = 0; i < 3; i++) {

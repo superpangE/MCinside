@@ -13,7 +13,7 @@ const MainPage = async () => {
   LeftContainer.insertAdjacentElement('beforeend', await HitGall('Hit 갤러리'));
   LeftContainer.insertAdjacentElement('beforeend', await HitGall('초개념'));
 
-  RightContainer.insertAdjacentElement('beforeend', LoginForm());
+  RightContainer.insertAdjacentElement('beforeend', await LoginForm());
   RightContainer.insertAdjacentElement('beforeend', BookGall());
 
   SubContainer.insertAdjacentElement('beforeend', LeftContainer);

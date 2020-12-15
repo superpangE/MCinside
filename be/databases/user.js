@@ -5,9 +5,9 @@
 
 const User = [
   {
-    id: "abc",
-    nickName: "abc",
-    password: "abc",
+    id: 'abc',
+    nickName: 'abc',
+    password: 'abc',
   },
 ];
 

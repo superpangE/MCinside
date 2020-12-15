@@ -4,9 +4,11 @@
 /* eslint-disable prefer-destructuring */
 const express = require('express');
 const path = require('path');
-const { Board, User, Comment } = require('./databases');
+const cookieParser = require('cookie-parser');
+const { Board, User } = require('./databases');
 
 const app = express();
+const session = {};
 
 // localhost:3000/join (id, password)
 // localhost:3000/login (default: post)
@@ -15,6 +17,7 @@ const app = express();
 // json -> {name: "이기훈", pw: "1234"}, false
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser());
 
 app.get('/join', (req, res) => {
   const id = req.query.id;
@@ -34,6 +37,10 @@ app.get('/login', (req, res) => {
   const pw = req.query.pw;
   for (let i = 0; i < User.length; i++) {
     if (User[i].id === id && User[i].password === pw) {
+      session[id] = id;
+      res.cookie('cookie', id, {
+        maxAge: 60 * 60 * 1000,
+      });
       return res.json(true);
     }
   }
@@ -42,6 +49,23 @@ app.get('/login', (req, res) => {
 
 app.get('/board', (req, res) => {
   res.json({ board: Board });
+});
+
+app.get('/isLogined', (req, res) => {
+  const id = session[req.cookies.cookie];
+  if (id) {
+    for (let i = 0; i < User.length; i++) {
+      if (User[i].id == id) {
+        return res.json({
+          status: true,
+          id: id,
+        });
+      }
+    }
+  } else
+    res.json({
+      status: false,
+    });
 });
 
 app.listen(3000);
