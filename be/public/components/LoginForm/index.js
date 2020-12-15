@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-concat */
 /* eslint-disable prefer-template */
-import { getInputElement, getButton, getLink, getContainer } from '../common';
+import { getInputElement, getButton, getLink, getContainer } from '../common.js';
 
 const LoginForm = () => {
   const loginContainer = getContainer('login_container', null);

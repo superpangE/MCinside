@@ -11,7 +11,7 @@ const getContainer = (id, className, imgEle = undefined) => {
 const getSpan = (id, className, text = undefined, imgEle = undefined) => {
   const spanbox = document.createElement('span');
   spanbox.textContent = text;
-  if (className != null) spanbox.className = className;
+  if (className !== null) spanbox.className = className;
   else spanbox.id = id;
   if (imgEle !== undefined) {
     spanbox.insertAdjacentElement('afterbegin', imgEle);

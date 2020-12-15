@@ -3,11 +3,12 @@
   text-decoration: none;
 }
 
- /* 로그인 폼 */
-.login_container {
-  border: 1px solid black;
-  width: 35%;
-  padding: 6px;
+/* 로그인 폼 */
+#login_container {
+  border: 2px solid #3c4790;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
 }
 
 #input_id,
@@ -18,129 +19,145 @@
 }
 
 /* 헤더 */
-.header_container{
+.header_container {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.label_title{
-  font-size : 6px;
-  margin : 0 6px;
+.label_title {
+  font-size: 6px;
+  margin: 0 6px;
   font-weight: 900;
 }
-.header_label{
-  font-size : 6px;
-  margin : 0 6px;
-
+.header_label {
+  font-size: 6px;
+  margin: 0 6px;
 }
-.header_label:hover{
+.header_label:hover {
   font-weight: 900;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-#header_input{
-  width : 300px;
+#header_input {
+  width: 300px;
 }
 
 /* 메뉴 바 */
 
-#BigMenu{
+#BigMenu {
   display: flex;
-  justify-content : space-around;
+  justify-content: space-around;
   align-items: center;
-  background-color: #4A56A8;
-  color : white;
-  height : 50px;
+  background-color: #4a56a8;
+  color: white;
+  height: 50px;
 }
 
-#menuLabel{
+#menuLabel {
   display: flex;
-  justify-content : space-between;
+  justify-content: space-between;
   align-items: center;
   /* border : 1px solid; */
-  width : 600px;
+  width: 600px;
 }
 
-
-.labels:hover{
-  cursor:pointer;
+.labels:hover {
+  cursor: pointer;
   text-decoration: underline;
 }
 
 /* 실북갤 */
-.bookgall_container{
-  border:1px solid;
-  width : 320px;
+.bookgall_container {
+  border: 1px solid #ccc;
+  width: 300px;
+  margin: 10px;
 }
 
-.bookgall_titlewrap{
-  display : flex;
+.bookgall_titlewrap {
+  display: flex;
   justify-content: space-between;
   padding: 15px;
   border-bottom: 1px dashed gray;
 }
-.bookgall_link{
-  margin: 4px 0px 7px 0px;
+.bookgall_link {
+  margin: 4px 0px 7px 10px;
 }
 
-.bookgall_rank{
-  background-color: #4A56A8;
+.bookgall_rank {
+  background-color: #4a56a8;
   padding: 0px 2px;
-  color : white;
+  color: white;
 }
-.bookgall_contentwrap{
+.bookgall_contentwrap {
   display: flex;
   flex-direction: column;
-  margin : 0 5px;  
+  margin: 0 5px;
 }
 
-.bookgall_name{
-  margin : 0 5px;  
-  color : black;
+.bookgall_name {
+  margin: 0 5px;
+  font-size: 14px;
+  color: black;
 }
 
-.bookgall_name:hover{
-  text-decoration: underline;  
+.bookgall_name:hover {
+  text-decoration: underline;
 }
 
 /* 힛갤 */
-.hitgall_container{
-  padding : 10px;
+.hitgall_container {
+  padding: 10px;
 }
-.hitgall_title_label:hover{
+.hitgall_title_label:hover {
   cursor: pointer;
 }
-.hitgall_titlewrap{
-  border-bottom : 2px solid #3c4790;
-  padding :7px;
-  color : #3c4790;
+.hitgall_titlewrap {
+  border-bottom: 2px solid #3c4790;
+  padding: 7px;
+  color: #3c4790;
 }
-.hitgall_titlewrap{
-  cursor:pointer;
+.hitgall_titlewrap {
+  cursor: pointer;
 }
-.hitgall_hitcontent{
-  display : flex;
-  flex-direction :column;
-  padding-right : 10px;
-
+.hitgall_hitcontent {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
 }
-.hitgall_hitcontent:hover{
+.hitgall_hitcontent:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.hitgall_title{
-  display :table-cell;
+.hitgall_title {
+  display: table-cell;
+  font-weight: bold;
+  font-size: 15px;
 }
-.hitgall_title:hover{
+.hitgall_title:hover {
   cursor: pointer;
 }
-.hitgall_contentwrap{
-  padding : 8px 0;
-  display : flex;
+.hitgall_gallname {
+  color: #525eaa;
+  font-size: 13px;
+  display: table-cell;
+}
+.hitgall_gallname:hover {
+  cursor: pointer;
+}
+.hitgall_contentwrap {
+  padding: 8px 0;
+  display: flex;
 }
 
-.hit_gall_photo{
-  width : 171px;
-  height : 171px;
+.hit_gall_photo {
+  width: 171px;
+  height: 171px;
+}
 
+/* 메인 페이지 */
+
+.subpage_container {
+  display: flex;
+  justify-content: center;
 }

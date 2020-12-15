@@ -1,9 +1,9 @@
-import { getContainer, getimgElment, getInputElement, getButton, getLabel } from '../common';
+import { getContainer, getimgElment, getInputElement, getButton, getLabel } from '../common.js';
 
 const Header = () => {
   const HeaderContainer = getContainer(null, 'header_container');
   const logoImg = getimgElment('https://nstatic.dcinside.com/dc/logo_day/dc_logo_201207.gif');
-  const Logo = getContainer('', 'logo', 'className', logoImg);
+  const Logo = getContainer(null, 'logo', logoImg);
   const SearchBox = getContainer(null, 'search_box');
   const Labelwrap = getContainer(null, 'label_wrap');
   const Inputwrap = getContainer(null, 'input_wrap');
