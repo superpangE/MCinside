@@ -17,5 +17,6 @@ module.exports = {
     'object-curly-newline': 0,
     'no-plusplus': 0, // for문 ++ 허용
     'no-alert': 0, // alert 허용
+    'import/extensions': 'always',
   },
 };

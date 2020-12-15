@@ -1,4 +1,4 @@
-import { getContainer, getLabel } from '../common';
+import { getContainer, getLabel } from '../common.js';
 
 const MenuBar = () => {
   const MenuWrap = getContainer('BigMenu', null);

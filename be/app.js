@@ -1,6 +1,10 @@
-const express = require("express");
-const path = require("path");
-const { Board, User, Comment } = require("./databases");
+/* eslint-disable no-unused-vars */
+/* eslint-disable consistent-return */
+/* eslint-disable object-shorthand */
+/* eslint-disable prefer-destructuring */
+const express = require('express');
+const path = require('path');
+const { Board, User, Comment } = require('./databases');
 
 const app = express();
 
@@ -10,14 +14,14 @@ const app = express();
 // 서버로 -> localhost:3000/login 인식 후 -> 응답 생성 후 -> 클라이언트 전달
 // json -> {name: "이기훈", pw: "1234"}, false
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/join", (req, res) => {
+app.get('/join', (req, res) => {
   const id = req.query.id;
   const nickName = req.query.nickName;
   const pw = req.query.pw;
   for (let i = 0; i < User.length; i++) {
-    if (User[i].id == id) {
+    if (User[i].id === id) {
       return res.json(false);
     }
   }
@@ -25,18 +29,18 @@ app.get("/join", (req, res) => {
   res.json(true);
 });
 
-app.get("/login", (req, res) => {
+app.get('/login', (req, res) => {
   const id = req.query.id;
   const pw = req.query.pw;
   for (let i = 0; i < User.length; i++) {
-    if (User[i].id == id && User[i].password == pw) {
+    if (User[i].id === id && User[i].password === pw) {
       return res.json(true);
     }
   }
   res.json(false);
 });
 
-app.get("/board", (req, res) => {
+app.get('/board', (req, res) => {
   res.json({ board: Board });
 });
 

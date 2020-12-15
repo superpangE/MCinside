@@ -1,4 +1,4 @@
-import { getContainer, getLabel, getSpan, getLink } from '../common';
+import { getContainer, getLabel, getSpan, getLink } from '../common.js';
 
 const getRankContent = (rank, name) => {
   const Content = getLink('bookgall_link', '/', '');
