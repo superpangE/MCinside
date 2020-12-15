@@ -18,6 +18,19 @@
   margin: 1px;
 }
 
+/* 로그인 성공 폼 */
+#logined_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #3c4790;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  height: 97px;
+}
+
 /* 헤더 */
 .header_container {
   display: flex;

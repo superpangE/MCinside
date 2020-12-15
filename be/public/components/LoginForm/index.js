@@ -1,6 +1,7 @@
 /* eslint-disable no-useless-concat */
 /* eslint-disable prefer-template */
 import { getInputElement, getButton, getLink, getContainer, getLabel } from '../common.js';
+import LoginedForm from './LoginedForm.js';
 
 const LoginForm = async () => {
   const response = await fetch('http://localhost:3000/isLogined', {
@@ -8,10 +9,8 @@ const LoginForm = async () => {
   });
   const data = await response.json();
 
-  if (data.status) {
-    const TempLabel = getLabel('temp_label', `${data.id}님 환영합니다!`);
-    return TempLabel;
-  }
+  if (data.status) return LoginedForm(data.id);
+
   const loginContainer = getContainer('login_container', null);
   const loginWraps = [];
   for (let i = 0; i < 3; i++) {
@@ -37,16 +36,21 @@ const LoginForm = async () => {
     const mcId = inputId.value;
     const mcPw = inputPw.value;
 
-    const URL = 'http://localhost:3000/login?' + 'id=' + mcId + '&pw=' + mcPw;
-
     // 서버로 데이터를 보내 응답을 기다린다.
-    const response = await fetch(URL, {
-      method: 'get',
+    const response = await fetch('http://localhost:3000/login', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        id: mcId,
+        pw: mcPw,
+      }),
     });
     const data = await response.json();
 
-    if (data === true) window.alert('로그인 성공');
-    else window.alert('로그인 실패!');
+    if (data === true) {
+      window.alert('로그인 성공');
+      window.location.href = '/';
+    } else window.alert('로그인 실패!');
   };
 
   loginButton.addEventListener('click', onClick);

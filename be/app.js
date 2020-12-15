@@ -6,7 +6,6 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const { Board, User } = require('./databases');
-
 const app = express();
 const session = {};
 
@@ -18,11 +17,13 @@ const session = {};
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-app.get('/join', (req, res) => {
-  const id = req.query.id;
-  const nickName = req.query.nickName;
-  const pw = req.query.pw;
+app.post('/join', (req, res) => {
+  const id = req.body.id;
+  const nickName = req.body.nickName;
+  const pw = req.body.pw;
   for (let i = 0; i < User.length; i++) {
     if (User[i].id === id) {
       return res.json(false);
@@ -32,9 +33,9 @@ app.get('/join', (req, res) => {
   res.json(true);
 });
 
-app.get('/login', (req, res) => {
-  const id = req.query.id;
-  const pw = req.query.pw;
+app.post('/login', (req, res) => {
+  const id = req.body.id;
+  const pw = req.body.pw;
   for (let i = 0; i < User.length; i++) {
     if (User[i].id === id && User[i].password === pw) {
       session[id] = id;
