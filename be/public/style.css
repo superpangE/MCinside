@@ -209,3 +209,84 @@
   opacity: 100%;
   border-color: #3c4790;
 }
+
+/* 검색 페이지 게시글 부분 */
+
+.board_container {
+  width: 100%;
+  margin-top: 15px;
+}
+.header_wrap {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #3c4790;
+  border-bottom: 1px solid #3c4790;
+}
+
+.board_num {
+  width: 5%;
+  text-align: center;
+  display: inline-block;
+}
+
+.board_title,
+.written_title {
+  width: 50%;
+  display: inline-block;
+}
+.written_title {
+  margin: auto;
+}
+
+.board_title {
+  text-align: center;
+}
+
+.board_author {
+  width: 10%;
+  text-align: center;
+  display: inline-block;
+}
+.board_date {
+  width: 15%;
+  text-align: center;
+  display: inline-block;
+}
+.board_clicked {
+  width: 7%;
+  text-align: center;
+  display: inline-block;
+}
+.board_reccomand {
+  width: 7%;
+  text-align: center;
+  display: inline-block;
+}
+
+.written_container {
+  border-bottom: 1px solid #aaaaaa;
+  line-height: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.written_container:hover {
+  background-color: rgb(118, 128, 199);
+  transition: 1s;
+}
+
+.footer_wrap {
+  padding: 10px;
+  text-align: end;
+}
+
+#write_btn {
+  width: 70px;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  background-color: #3c4790;
+}
+#write_btn:hover {
+  cursor: pointer;
+}

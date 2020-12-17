@@ -6,6 +6,8 @@
 // goodNum: 추천 갯수
 // imgUrl: 이미지 url
 // gallName: 갤러리 이름
+// clicked : 조회수
+// createAt :
 
 const Board = [
   {
@@ -16,6 +18,8 @@ const Board = [
     goodNum: 2,
     imgUrl: 'https://wstatic.dcinside.com/main/main2011/2020/12/08/gall_66424_20201208153304.jpg',
     gallName: '국내야구',
+    clicked: 10,
+    createAt: '2020-12-17',
   },
   {
     id: 1,
@@ -25,6 +29,8 @@ const Board = [
     goodNum: 4,
     imgUrl: 'https://wstatic.dcinside.com/main/main2011/2020/12/08/gall_66413_20201208101123.png',
     gallName: '토이',
+    clicked: 10,
+    createAt: '2020-12-17',
   },
   {
     id: 2,
@@ -34,6 +40,8 @@ const Board = [
     goodNum: 10,
     imgUrl: 'https://wstatic.dcinside.com/main/main2011/2013/12/07/gall_27768_hit.jpg',
     gallName: '헬스',
+    clicked: 10,
+    createAt: '2020-12-17',
   },
   {
     id: 3,
@@ -43,6 +51,8 @@ const Board = [
     goodNum: 10,
     imgUrl: 'https://wstatic.dcinside.com/main/main2011/2020/12/11/gall_66475_20201211102632.jpg',
     gallName: '에어소프트',
+    clicked: 10,
+    createAt: '2020-12-17',
   },
   {
     id: 4,
@@ -52,6 +62,8 @@ const Board = [
     goodNum: 10,
     imgUrl: 'https://wstatic.dcinside.com/main/main2011/2020/12/10/gall_66463_20201210152451.jpg',
     gallName: '스즈미야 하루히',
+    clicked: 10,
+    createAt: '2020-12-17',
   },
 ];
 
