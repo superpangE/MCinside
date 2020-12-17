@@ -10,6 +10,18 @@ const LoginedForm = (id) => {
   const MyInfoButton = getButton('myinfo_btn', '내 정보');
   const Logoutbutton = getButton('logout_btn', '로그 아웃');
 
+  const onClick = async () => {
+    const response = await fetch('http://localhost:3000/logout', {
+      method: 'get',
+    });
+    const data = await response.json();
+    if (data.status === true) {
+      window.alert('정상적으로 로그아웃 되었습니다.');
+      window.location.href = '/';
+    } else window.alert('정상적으로 로그아웃 실패했습니다.');
+  };
+  Logoutbutton.addEventListener('click', onClick);
+
   NameWrap.insertAdjacentElement('beforeend', ShowName);
   StatusWrap.insertAdjacentElement('beforeend', MyInfoButton);
   StatusWrap.insertAdjacentElement('beforeend', Logoutbutton);

@@ -13,4 +13,4 @@ const Root2 = async () => {
   root.insertAdjacentElement('beforeend', Board);
 };
 
-Root2();
+Root();

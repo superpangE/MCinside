@@ -69,6 +69,15 @@ app.get('/isLogined', (req, res) => {
     });
 });
 
+app.get('/logout', (req, res) => {
+  const id = session[req.cookies.cookie];
+  if (id) {
+    session[req.cookies.cookie] = undefined;
+    return res.json({ status: true });
+  }
+  res.json({ status: false });
+});
+
 app.listen(3000);
 
 module.exports = app;
