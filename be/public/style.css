@@ -290,3 +290,77 @@
 #write_btn:hover {
   cursor: pointer;
 }
+
+/* 상세 페이지 */
+.btn_wrap {
+  width: 300px;
+  height: 120px;
+  margin: auto;
+  margin-top: 50px;
+
+  /* border: 1px solid; */
+}
+.select_wrap {
+  height: 70%;
+  font-size: 30px;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-around;
+  /* text-align: center; */
+  margin: auto;
+}
+.bottom_wrap {
+  border: 1px solid;
+  border-top: none;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+#good_button,
+#bad_button {
+  height: 70%;
+  width: 80px;
+  top: 50%;
+  margin-top: 10px;
+}
+.good_click {
+  padding-top: 20px;
+  padding-left: 15px;
+}
+.bad_click {
+  padding-top: 20px;
+  padding-right: 15px;
+}
+#add_hit,
+#share_btn,
+#report_btn {
+  width: 99px;
+  border: none;
+}
+#add_hit:hover,
+#share_btn:hover,
+#report_btn:hover {
+  background-color: #aaaaaa;
+}
+
+.pageview_wrap {
+  padding: 0 10%;
+}
+
+.content_title {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #aaaaaa;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+.content_label {
+  font-weight: bold;
+}
+.content_middle {
+  padding-top: 15px;
+}
+
+.logo {
+  cursor: pointer;
+}

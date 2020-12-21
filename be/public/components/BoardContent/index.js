@@ -1,3 +1,4 @@
+import { ShowPage } from '../../Page/index.js';
 import { getButton, getContainer, getSpan } from '../common.js';
 // id : 기본키
 // author : 글쓴이
@@ -10,6 +11,14 @@ import { getButton, getContainer, getSpan } from '../common.js';
 // createAt :
 
 const getWritten = (board) => {
+  const onClick = async () => {
+    const root = document.querySelector('#root');
+    while (root.firstChild) {
+      root.removeChild(root.firstChild);
+    }
+    const Show = await ShowPage(board.id);
+    root.insertAdjacentElement('beforeend', Show);
+  };
   const WrittenContainer = getContainer(null, 'written_container');
   const WrittenNum = getSpan(null, 'board_num', board.id);
   const WrittenNTitle = getSpan(null, 'written_title', board.title);
@@ -25,6 +34,7 @@ const getWritten = (board) => {
   WrittenContainer.insertAdjacentElement('beforeend', WrittenClicked);
   WrittenContainer.insertAdjacentElement('beforeend', WrittenRecommand);
 
+  WrittenContainer.addEventListener('click', onClick);
   return WrittenContainer;
 };
 

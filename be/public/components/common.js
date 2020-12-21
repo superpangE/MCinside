@@ -8,6 +8,14 @@ const getContainer = (id, className, imgEle = undefined) => {
   return container;
 };
 
+const getText = (id, className, text) => {
+  const container = document.createElement('div');
+  if (className != null) container.className = className;
+  else container.id = id;
+  container.textContent = text;
+  return container;
+};
+
 const getSpan = (id, className, text = undefined, imgEle = undefined) => {
   const spanbox = document.createElement('span');
   spanbox.textContent = text;
@@ -55,4 +63,13 @@ const getLink = (className, href, text) => {
   return link;
 };
 
-export { getContainer, getimgElment, getInputElement, getButton, getLabel, getLink, getSpan };
+export {
+  getContainer,
+  getimgElment,
+  getInputElement,
+  getButton,
+  getLabel,
+  getLink,
+  getSpan,
+  getText,
+};
