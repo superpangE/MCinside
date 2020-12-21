@@ -5,45 +5,31 @@
 ### 김민창 😃
 ### 이기훈 😃
 
-## Issue란?
-- 앞으로 진행할 내용을 Issue로 작성해서 관리한다.
+### 이번 프로젝트는 기초적인 Javascript, CSS를 사용해 간단한 웹 페이지를 만드는 것이 목표입니다. :+1: 
 
-## Issue 작성
+# 화면 - 메인 화면
 
-- Issue를 작성한다.
+![](https://ifh.cc/g/bblflO.jpg)
 
-- Issue 우측 탭에 있는 Projects를 클릭한다.
+#### 로그인, 로그아웃, 검색 기능을 동작하도록 구현하였습니다. 검색 기능은 실제로 동작은 하지 않지만, 임의의 검색 페이지로 넘어가도록 구현하였습니다.
 
-- 해당하는 Project를 선택한다.
+# 화면 - 검색 화면
 
+![](https://ifh.cc/g/oudojL.jpg)
 
-## Projects 작성 
+#### 검색 화면은 서버로부터 게시판 글 목록 API를 호출해 글 데이터들을 불러온 뒤, 해당 글들을 보여주는 페이지로 구성하였습니다. 해당 글을 클릭했을 경우 해당 글에 대한 상세 페이지로 이동하도록 구현하였습니다. 
 
-- Issue들을 Projects에서 관리
+# 화면 - 상세 화면
 
-- 오늘 진행할 Issue를 In Progress로 변경 
+![](https://ifh.cc/g/P90Vmq.jpg)
 
-- 진행 완료 : Done으로 변경
-- 진행 미완료 : 유지
+#### 상세 화면은 해당 글의 제목, 내용, 개념, 비추천등의 내용을 보여주도록 구현하였습니다. 개념 및 비추는 로그인이 된 경우에만 사용가능하도록 구현하였고, 1번만 사용이 가능하도록 하였습니다.
 
-## Git 사용 방법
+## Git 전략 
 
-### 작업 전
+- 새로운 Branch를 만들어서 작업을 한 다음, PR을 날려 Main에 Merge합니다.
 
-- git pull origin main : main 브랜치에서 최신 Version을 받아온다.
+## Issue, Project, Wiki 기능 사용
 
+- Issue, Project, Wiki를 사용해 프로젝트의 진행상황과 오늘 할 일, 내일 할 일등의 내용을 정리하였습니다.
 
-### 작업 후
-
-- git add . : 전체 내용을 Commit 가능한 상태로 변경
-
-- git commit -m "커밋메세지" : push 할 수 있는 상태로 변경
-
-- git push origin main : main 브랜치에 내가 작업한 내용을 올린다.
-
-
-## 참고 사이트 
-
-- 마크다운 명령어 : https://heropy.blog/2017/09/30/markdown/
-
-- 이모지 : https://www.emojiall.com/ko/categories/A
