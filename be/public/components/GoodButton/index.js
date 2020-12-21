@@ -1,13 +1,33 @@
 import { getLabel, getButton, getContainer } from '../common.js';
 
-const GoodButton = () => {
-  const Goodclick = () => {
-    let good = document.getElementsByClassName('good_click')[0].textContent;
-    document.getElementsByClassName('good_click')[0].textContent = ++good;
+const GoodButton = (id) => {
+  const Goodclick = async () => {
+    const response = await fetch('http://localhost:3000/check', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        BoardId: id,
+      }),
+    });
+    const data = await response.json();
+    if (data.status == true) {
+      let good = document.getElementsByClassName('good_click')[0].textContent;
+      document.getElementsByClassName('good_click')[0].textContent = ++good;
+    } else alert('login plz');
   };
-  const Badclick = () => {
-    let bad = document.getElementsByClassName('bad_click')[0].textContent;
-    document.getElementsByClassName('bad_click')[0].textContent = ++bad;
+  const Badclick = async () => {
+    const response = await fetch('http://localhost:3000/check', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        BoardId: id,
+      }),
+    });
+    const data = await response.json();
+    if (data.status == true) {
+      let bad = document.getElementsByClassName('bad_click')[0].textContent;
+      document.getElementsByClassName('bad_click')[0].textContent = ++bad;
+    } else alert('login plz');
   };
 
   const MainContainer = getContainer(null, 'btn_wrap');

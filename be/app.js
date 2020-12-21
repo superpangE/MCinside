@@ -78,6 +78,18 @@ app.get('/logout', (req, res) => {
   res.json({ status: false });
 });
 
+app.post('/check', (req, res) => {
+  const id = session[req.cookies.cookie];
+  const boardIndex = req.body.BoardId;
+  if (id) {
+    if (Board[boardIndex].goodNum.includes(id)) return res.json({ status: false });
+    else {
+      Board[boardIndex].goodNum.push(id);
+      return res.json({ status: true });
+    }
+  } else return res.json({ status: false });
+});
+
 app.listen(3000);
 
 module.exports = app;

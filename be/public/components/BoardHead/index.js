@@ -1,6 +1,6 @@
 import { getLabel, getButton, getContainer } from '../common.js';
 
-const BoardHead = () => {
+const BoardHead = (selected = false) => {
   const MainContainer = getContainer(null, 'header_main');
   const BtnWrap = getContainer(null, 'header_btnwrap');
   const TitleWrap = getContainer(null, 'header_titlewrap');
@@ -27,7 +27,7 @@ const BoardHead = () => {
   TitleWrap.insertAdjacentElement('beforeend', SetupWrap);
 
   MainContainer.insertAdjacentElement('beforeend', TitleWrap);
-  MainContainer.insertAdjacentElement('beforeend', BtnWrap);
+  if (!selected) MainContainer.insertAdjacentElement('beforeend', BtnWrap);
 
   return MainContainer;
 };

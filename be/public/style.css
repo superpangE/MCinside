@@ -349,9 +349,7 @@
 
 .content_title {
   display: flex;
-  columns: auto;
-  vertical-align: center;
-  align-items: center;
+  flex-direction: column;
   border-bottom: 1px solid #aaaaaa;
   padding-top: 15px;
   padding-bottom: 5px;
@@ -361,4 +359,8 @@
 }
 .content_middle {
   padding-top: 15px;
+}
+
+.logo {
+  cursor: pointer;
 }

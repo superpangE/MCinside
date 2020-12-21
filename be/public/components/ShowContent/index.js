@@ -1,6 +1,6 @@
-import { getContainer, getLabel } from '../common.js';
+import { getContainer, getText } from '../common.js';
 
-const ShowContent = async () => {
+const ShowContent = async (id) => {
   const MainContainer = getContainer(null, 'show_container');
 
   const ContentHead = getContainer(null, 'content_head');
@@ -17,12 +17,12 @@ const ShowContent = async () => {
   });
 
   const boardData = await response.json();
-  const TitleLabel = getLabel('content_label', boardData.board[0].title);
-  const TitleAuthor = getLabel('content_author', boardData.board[0].author);
-  const MiddleLabel = getLabel('content_middle', boardData.board[0].content);
+  const TitleLabel = getText(null, 'content_label', boardData.board[id].title);
+  const TitleAuthor = getText(null, 'content_author', boardData.board[id].author);
+  const BoardContent = getText(null, 'content_middle', boardData.board[id].content);
   ContentTitle.insertAdjacentElement('beforeend', TitleLabel);
   ContentTitle.insertAdjacentElement('beforeend', TitleAuthor);
-  ContentMiddle.insertAdjacentElement('beforeend', MiddleLabel);
+  ContentMiddle.insertAdjacentElement('beforeend', BoardContent);
 
   ContentMain.insertAdjacentElement('beforeend', ContentTitle);
   ContentMain.insertAdjacentElement('beforeend', ContentMiddle);
